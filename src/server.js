@@ -10,7 +10,7 @@ app.get('/hook', (req, res) => {
 })
 
 app.post('/hook', (req, res) => {
-  console.log(req.body)
+  console.log(JSON.stringify(req.body))
   res.send("OK")
 })
 

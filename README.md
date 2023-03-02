@@ -36,5 +36,5 @@ Setup `https://{fqdn-of-your-server}/airthings/hook` as the webhook URL.
 # Local Testing
 
 ```
-curl -XPOST http://127.0.0.1:9883/hook -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json"
+curl -XPOST http://127.0.0.1:9883/hook -d '{"key1":"value1","key2":"value2"}' -H "Content-Type: application/json"
 ```
