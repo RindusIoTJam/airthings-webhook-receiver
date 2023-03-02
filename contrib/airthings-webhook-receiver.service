@@ -1,0 +1,14 @@
+[Unit]
+Description=Airthings Webhook Receiver
+Documentation=https://github.com/RindusIoTJam/airthings-webhook
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+WorkingDirectory=/opt/airthings-webhook-receiver/src
+ExecStart=/usr/bin/node --no-warnings /opt/airthings-webhook-receiver/src/server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

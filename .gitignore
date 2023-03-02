@@ -1,0 +1,15 @@
+# MacOS
+.DS_Store
+
+# Logs
+logs
+log
+*.log
+app.log.*
+npm-debug.log*
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
