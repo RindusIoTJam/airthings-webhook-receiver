@@ -18,5 +18,18 @@ $ systemctl enable airthings-webhook-receiver.service
 $ systemctl start airthings-webhook-receiver.service && journalctl -fu airthings-webhook-receiver.service
 ```
 
-## Apache forwarding (SSL endpoint)
+## Airthings SSL endpoint
+
+Ensure the endpoint is secured by SSL with e.g. _Apache_ adding the following to you VirtualHost:
+
+```
+ProxyPass        /airthings/ http://127.0.0.1:9883/
+ProxyPassReverse /airthings/ http://127.0.0.1:9883/
+```
+
+_STunnel_ could also be an option.
+
+## Airthings Webhook
+
+Setup `https://{fqdn-of-your-server}/airthings/hook` as the webhook URL.
 
